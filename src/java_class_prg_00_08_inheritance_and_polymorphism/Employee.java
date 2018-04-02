@@ -18,7 +18,11 @@ public abstract class Employee {
     
     public abstract double getPay();
     
+    /**
+     * Returns employee's name + pay for the week.
+     * @return String of form "pay for name: $(pay)"
+     */
     public String getPayCheck() {
-        return name + String.format("%02d", getPay());
+        return "Pay for " + name + ": $" + String.format("%.2f", this.getPay());
     }
 }

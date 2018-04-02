@@ -17,6 +17,11 @@ public class Salaried extends Employee {
         this.salary = salary;
     }
     
+    /**
+     * Overrides abstract getPay in Employee abstract class
+     * @return Salary as salary / 52.0 weeks in a year
+     * @override Overrides getPay() in abstract class Employee
+     */
     @Override
     public double getPay() {
         return this.salary / 52.0;
