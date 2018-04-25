@@ -25,4 +25,15 @@ public abstract class Employee {
     public String getPayCheck() {
         return "Pay for " + name + ": $" + String.format("%.2f", this.getPay());
     }
+    
+    public boolean equals(Object x) {
+        if(x instanceof Employee) {
+            Employee e = (Employee)x;
+            
+            return(name.equals(e.name));
+        }
+        else {
+            return false;
+        }
+    }
 }
